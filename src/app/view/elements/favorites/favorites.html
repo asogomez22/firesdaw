@@ -1,9 +1,11 @@
-<h2>Fires Preferides</h2>
-<a routerLink="/" class="back-link">&larr; Tornar a comarques</a>
-<div class="fair-grid">
+<h2 class="mb-1">Fires Preferides</h2>
+<a routerLink="/" class="btn btn-sm btn-outline-secondary mb-3">&larr; Tornar a comarques</a>
+<div class="row g-3">
   @for (fair of favorites; track fair.activityId) {
-    <app-fair-card [fair]="fair" />
+    <div class="col-sm-6 col-lg-4">
+      <app-fair-card [fair]="fair" />
+    </div>
   } @empty {
-    <p class="empty">No tens fires preferides. Ves a les comarques i marca alguna amb l'estrella!</p>
+    <p class="text-muted">No tens fires preferides. Ves a les comarques i marca alguna amb l'estrella!</p>
   }
 </div>

@@ -1,9 +1,13 @@
-<h2>Comarques de Catalunya</h2>
-<div class="region-grid">
+<h2 class="mb-4">Comarques de Catalunya</h2>
+<div class="row g-3">
   @for (region of regions; track region.regionId) {
-    <a class="region-card" [routerLink]="['/region', region.regionId]">
-      <span class="region-name">{{ region.regionName }}</span>
-      <span class="fair-count">{{ region.fairs.length }} fires</span>
-    </a>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <a class="card text-decoration-none h-100 shadow-sm" [routerLink]="['/region', region.regionId]">
+        <div class="card-body text-center">
+          <h5 class="card-title text-dark mb-1">{{ region.regionName }}</h5>
+          <span class="badge bg-secondary">{{ region.fairs.length }} fires</span>
+        </div>
+      </a>
+    </div>
   }
 </div>
