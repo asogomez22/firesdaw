@@ -1,0 +1,9 @@
+<h2>{{ regionName }}</h2>
+<a routerLink="/" class="back-link">&larr; Tornar a comarques</a>
+<div class="fair-grid">
+  @for (fair of fairs; track fair.activityId) {
+    <app-fair-card [fair]="fair" />
+  } @empty {
+    <p class="empty">No hi ha fires en aquesta comarca.</p>
+  }
+</div>

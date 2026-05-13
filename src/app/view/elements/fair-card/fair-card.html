@@ -1,0 +1,19 @@
+<div class="fair-card">
+  <div class="card-header">
+    <h3>{{ fair().activityName }}</h3>
+    <button class="fav-btn" [class.fav]="isFavorite()" (click)="toggle()">
+      {{ isFavorite() ? '★' : '☆' }}
+    </button>
+  </div>
+  <div class="card-body">
+    <p><strong>Població:</strong> {{ fair().municipalityName }}</p>
+    <p><strong>Data:</strong> {{ fair().date }}</p>
+    <p><strong>Lloc:</strong> {{ fair().location }}</p>
+    <p><strong>Sector:</strong> {{ fair().sectorName }}</p>
+    @if (fair().products) {
+      <p><strong>Productes:</strong> {{ fair().products }}</p>
+    }
+    <p><strong>Periodicitat:</strong> {{ fair().periodicityName }}</p>
+    <p><strong>Àmbit:</strong> {{ fair().fieldName }}</p>
+  </div>
+</div>

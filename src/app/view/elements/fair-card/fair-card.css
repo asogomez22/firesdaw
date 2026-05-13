@@ -1,0 +1,59 @@
+.fair-card {
+  background: #fff;
+  border: 1px solid #e0e7ef;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+
+.fair-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.card-header {
+  background: #f5f8fc;
+  padding: .75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: .5rem;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #1a3a5c;
+}
+
+.fav-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #b0cce8;
+  padding: 0;
+  line-height: 1;
+  transition: color .2s;
+}
+
+.fav-btn:hover {
+  color: #e8a020;
+}
+
+.fav-btn.fav {
+  color: #e8a020;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body p {
+  margin: 0 0 .35rem;
+  font-size: .9rem;
+  color: #333;
+}
+
+.card-body p:last-child {
+  margin-bottom: 0;
+}

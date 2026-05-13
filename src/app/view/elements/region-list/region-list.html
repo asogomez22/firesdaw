@@ -1,0 +1,9 @@
+<h2>Comarques de Catalunya</h2>
+<div class="region-grid">
+  @for (region of regions; track region.regionId) {
+    <a class="region-card" [routerLink]="['/region', region.regionId]">
+      <span class="region-name">{{ region.regionName }}</span>
+      <span class="fair-count">{{ region.fairs.length }} fires</span>
+    </a>
+  }
+</div>
